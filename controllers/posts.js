@@ -24,7 +24,7 @@ export const getPost = async (res, req) => {
 
 export const createPost = async (res, req) => {
   try {
-    const post = newPost(req.body)
+    const post = new Post(req.body)
     await post.save()
     res.status(201).json(post)
     
