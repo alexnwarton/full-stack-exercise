@@ -8,38 +8,38 @@ export const getPosts = async () => {
   }
 }
 
-// export const getProduct = async id => {
-//   try {
-//       const response = await api.get(`/products/${id}`)
-//       return response.data
-//   } catch (error) {
-//       throw error
-//   }
-// }
+export const getPost = async id => {
+  try {
+      const response = await api.get(`/posts/${id}`)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
 
-// export const createProduct = async product => {
-//   try {
-//       const response = await api.post('/products', product)
-//       return response.data
-//   } catch (error) {
-//       throw error
-//   }
-// }
+export const createPost = async post => {
+  try {
+      const response = await api.post('/posts', post)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
 
-// export const updateProduct = async (id, product) => {
-//   try {
-//       const response = await api.put(`/products/${id}`, product)
-//       return response.data
-//   } catch (error) {
-//       throw error
-//   }
-// }
+export const updatePost = async (id, post) => {
+  try {
+      const response = await api.put(`/posts/${id}`, post)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
 
-// export const deleteProduct = async id => {
-//   try {
-//       const response = await api.delete(`/products/${id}`)
-//       return response.data
-//   } catch (error) {
-//       throw error
-//   }
-// }
+export const deletePost = async id => {
+  try {
+      const response = await api.delete(`/posts/${id}`)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
