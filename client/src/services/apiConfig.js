@@ -3,12 +3,12 @@ import axios from 'axios';
 let apiUrl
 
 const apiUrls = {
-	production: '',
+	production: 'https://blog-post-api-001.herokuapp.com/api',
 	development: 'http://localhost:3000/api'
 }
 
 if (window.location.hostname === 'localhost') {
-	apiUrl = apiUrls.development;
+	apiUrl = apiUrls.production;
 }
 else {
 	apiUrl = apiUrls.production;
