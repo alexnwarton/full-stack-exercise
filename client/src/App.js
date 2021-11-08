@@ -1,23 +1,22 @@
 import React from 'react'
 import './App.css'
-// import Home from './screens/Home/Home'
-// import Posts from './screens/Posts/Posts'
-// import PostCreate from './screens/PostCreate/ProductCreate'
-// import PostEdit from './screens/PosttEdit/ProductEdit'
-// import PostDetail from './screens/PostDetail/ProductDetail'
-//import { Route, Routes } from 'react-router-dom'
+import Posts from './screens/Posts/Posts.js'
+import PostCreate from './screens/PostCreate/PostCreate'
+import PostEdit from './screens/PostEdit/PostEdit'
+import PostDetail from './screens/PostDetail/PostDetail'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <div className="app">
      
         <h1>Test</h1>
-      {/*  <Route exact path="/" component={Home} />
-        <Route exact path="/posts" component={Posts} />
-        <Route path="/add-post" component={PostCreate} />
-        <Route exact path="/posts/:id/edit" component={PostEdit} />
-        <Route exact path="/posts/:id" component={PostDetail} />*/}
-    
+      <Routes>
+        <Route exact path="/posts" element={<Posts/>} />
+        <Route exact path="/add-post" element={<PostCreate/>} />
+        <Route exact path="/posts/:id/edit" element={<PostEdit/>} />
+        <Route exact path="/posts/:id" element={<PostDetail/>} />
+      </Routes>
     </div>
   )
 }
