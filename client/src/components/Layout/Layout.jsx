@@ -1,7 +1,7 @@
-import Nav from '/components/Nav'
-import Footer from '/components/Footer'
+import Nav from '../Nav/Nav.jsx'
+import Footer from '../Footer/Footer.jsx'
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <div className='layout'>
       <Nav />
