@@ -1,7 +1,7 @@
 const Nav = () => {
   return (
     <div>
-      <h1>Past Pizza People</h1>
+      <h1>Pasta Pizza People</h1>
     </div>
   )
 }

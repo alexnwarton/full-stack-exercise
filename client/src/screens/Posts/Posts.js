@@ -1,8 +1,11 @@
+import Layout from '../../components/Layout/Layout.jsx'
 const Posts = () => {
-	return (
+  return (
+    <Layout>
 		<div>
 			<h1>Test Posts.js</h1>
-		</div>
+      </div>
+      </Layout>
 	)
 }
 

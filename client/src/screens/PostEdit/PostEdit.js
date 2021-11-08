@@ -1,8 +1,11 @@
+import Layout from '../../components/Layout/Layout.jsx'
 const PostEdit = () => {
-	return (
+  return (
+    <Layout>
 		<div>
 			<h1>Test PostEdit.js</h1>
-		</div>
+      </div>
+      </Layout>
 	)
 }
 
