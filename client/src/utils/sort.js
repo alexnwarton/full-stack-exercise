@@ -11,4 +11,7 @@ const compareKey = key =>
 		}
 }
 
-export const AZ = arr => arr.sort(compareKey('name'))
+export const AZTitle = arr => arr.sort(compareKey('title'))
+export const ZATitle = arr => arr.sort(compareKey('title')).reverse()
+export const AZPub = arr => arr.sort(compareKey('publisher'))
+export const ZAPub = arr => arr.sort(compareKey('publisher')).reverse()
