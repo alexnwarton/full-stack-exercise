@@ -5,8 +5,8 @@ import './Posts.css'
 
 //import Post from '../../components/Post/Post'
 //import Search from '../../components/Search/Search'
-import Sort from '../../components/Sort/Sort'
-import { AZ } from '../../utils/sort'
+//import Sort from '../../components/Sort/Sort'
+//import { AZ, ZA } from '../../utils/sort'
 
 
 const Posts = () => {
@@ -25,26 +25,26 @@ const Posts = () => {
     fetchPosts();
   }, [])
   
-  const handleSort = (type) => {
-    if (type !== '' && type !== undefined) {
-      setSortType(type)
-    }
-    switch (type) {
-      case 'title-ascending':
-        setSearchResult(AZ(searchResult))
-        break
-      // case 'title-descending':
-      //   setSearchResult(ZA(searchResult))
-      //   break
-      default:
-        break
-    }
-  }
+  // const handleSort = (type) => {
+  //   if (type !== '' && type !== undefined) {
+  //     setSortType(type)
+  //   }
+  //   switch (type) {
+  //     case 'title-ascending':
+  //       setSearchResult(AZ(searchResult))
+  //       break
+  //     case 'title-descending':
+  //       setSearchResult(ZA(searchResult))
+  //       break
+  //     default:
+  //       break
+  //   }
+  // }
 
-  if (applySort) {
-    handleSort(sortType)
-    setApplySort(false)
-  }
+  // if (applySort) {
+  //   handleSort(sortType)
+  //   setApplySort(false)
+  // }
 
   // const handleSearch = (event) => {
   //   const results = posts.filter((post) =>
