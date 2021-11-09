@@ -12,7 +12,7 @@ const App = () => {
      
         <h1>Test</h1>
       <Routes>
-        <Route exact path="/posts" element={<Posts/>} />
+        <Route exact path="/" element={<Posts/>} />
         <Route exact path="/add-post" element={<PostCreate/>} />
         <Route exact path="/posts/:id/edit" element={<PostEdit/>} />
         <Route exact path="/posts/:id" element={<PostDetail/>} />
