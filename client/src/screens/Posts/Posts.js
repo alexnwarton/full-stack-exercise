@@ -2,9 +2,10 @@ import Layout from '../../components/Layout/Layout.jsx'
 import { useState, useEffect } from 'react'
 import { getPosts } from '../../services/posts.js'
 import './Posts.css'
+import Post from '../../components/Post/Post'
 
 // import PostsData from '../../components/Post/Post'
-// import Search from '../../components/Search/Search'
+import Search from '../../components/Search/Search'
 // import Sort from '../../components/Sort/Sort'
 // // import { AZ, ZA } from '../../utils/sort'
 
@@ -21,6 +22,7 @@ const Posts = () => {
     const fetchPosts = async () => {
       const allPosts = await getPosts()
       setPosts(allPosts)
+      setSearchResult(allPosts)
       console.log(posts)
       console.log(allPosts)
     }
@@ -63,9 +65,9 @@ const Posts = () => {
 		  <div>
 			  <h1>Test Posts.js</h1>
       </div>
-      {/* 
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />*/}
-      {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
+      
+      {/* <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
+      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <div className='posts'>
         {searchResult.map((post, index) => {
           return (
@@ -78,7 +80,8 @@ const Posts = () => {
               key={index}
             />
           )
-        })} </div> */}
+        })}
+      </div>
       
     </Layout>
 	)
