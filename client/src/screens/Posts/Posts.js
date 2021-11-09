@@ -28,7 +28,7 @@ const Posts = () => {
     }
     fetchPosts();
   }, [])
-  
+
   // const handleSort = (type) => {
   //   if (type !== '' && type !== undefined) {
   //     setSortType(type)
@@ -62,10 +62,10 @@ const Posts = () => {
 
   return (
     <Layout>
-		  <div>
-			  <h1>Test Posts.js</h1>
+      <div>
+        <h1>Test Posts.js</h1>
       </div>
-      
+
       {/* <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <div className='posts'>
@@ -82,9 +82,9 @@ const Posts = () => {
           )
         })}
       </div>
-      
+
     </Layout>
-	)
+  )
 }
 
 export default Posts
