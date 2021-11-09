@@ -70,7 +70,6 @@ const handleChange = (event) => {
           />
           <button type="submit" className="update-button">Create Post</button>
         </form>
-			<h1>Test PostCreate.js</h1>
       </div>
       </Layout>
 	)

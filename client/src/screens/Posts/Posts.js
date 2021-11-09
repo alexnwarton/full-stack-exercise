@@ -68,7 +68,6 @@ const Posts = () => {
   return (
     <Layout>
       <div>
-        <h1>Test Posts.js</h1>
       </div>
        <Sort onSubmit={handleSubmit} handleSort={handleSort} /> 
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
