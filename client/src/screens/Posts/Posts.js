@@ -67,10 +67,9 @@ const Posts = () => {
 
   return (
     <Layout>
-		  <div>
-			  <h1>Test Posts.js</h1>
+      <div>
+        <h1>Test Posts.js</h1>
       </div>
-      
        <Sort onSubmit={handleSubmit} handleSort={handleSort} /> 
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <div className='posts'>
@@ -87,9 +86,9 @@ const Posts = () => {
           )
         })}
       </div>
-      
+
     </Layout>
-	)
+  )
 }
 
 export default Posts
