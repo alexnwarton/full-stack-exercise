@@ -9,6 +9,8 @@ import './Posts.css'
 // // import { AZ, ZA } from '../../utils/sort'
 
 
+// export post component to render it on screen
+
 const Posts = () => {
   const [posts, setPosts] = useState([])
   const [searchResult, setSearchResult] = useState([])
@@ -61,12 +63,13 @@ const Posts = () => {
 		  <div>
 			  <h1>Test Posts.js</h1>
       </div>
+      {/* 
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} />*/}
       {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div className='posts'>
         {searchResult.map((post, index) => {
           return (
-            <Product
+            <Post
               _id={post._id}
               title={post.title}
               imgURL={post.imgURL}
@@ -75,8 +78,8 @@ const Posts = () => {
               key={index}
             />
           )
-        })}
-      </div> */}
+        })} </div> */}
+      
     </Layout>
 	)
 }
