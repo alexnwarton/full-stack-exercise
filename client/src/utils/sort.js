@@ -11,4 +11,4 @@ const compareKey = key =>
 		}
 }
 
-export default compareKey
+export const AZ = arr => arr.sort(compareKey('name'))

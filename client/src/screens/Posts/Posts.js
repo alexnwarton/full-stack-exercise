@@ -1,12 +1,12 @@
 import Layout from '../../components/Layout/Layout.jsx'
 import { useState, useEffect } from 'react'
 import { getPosts } from '../../services/posts.js'
-import './Posts.ss'
+import './Posts.css'
 
-import Posts from '../../components/Post/Post'
-import Search from '../../components/Search/Search'
+//import Post from '../../components/Post/Post'
+//import Search from '../../components/Search/Search'
 import Sort from '../../components/Sort/Sort'
-import { AZ, ZA } from '../../utils/sort'
+import { AZ } from '../../utils/sort'
 
 
 const Posts = () => {
@@ -33,9 +33,9 @@ const Posts = () => {
       case 'title-ascending':
         setSearchResult(AZ(searchResult))
         break
-      case 'title-descending':
-        setSearchResult(ZA(searchResult))
-        break
+      // case 'title-descending':
+      //   setSearchResult(ZA(searchResult))
+      //   break
       default:
         break
     }
@@ -46,13 +46,13 @@ const Posts = () => {
     setApplySort(false)
   }
 
-  const handleSearch = (event) => {
-    const results = posts.filter((post) =>
-      post.title.toLowerCase().includes(event.target.value.toLowerCase())
-    )
-    setSearchResult(results)
-    setApplySort(true)
-  }
+  // const handleSearch = (event) => {
+  //   const results = posts.filter((post) =>
+  //     post.title.toLowerCase().includes(event.target.value.toLowerCase())
+  //   )
+  //   setSearchResult(results)
+  //   setApplySort(true)
+  // }
 
   const handleSubmit = (event) => event.preventDefault()
 
