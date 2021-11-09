@@ -2,12 +2,11 @@ import Layout from '../../components/Layout/Layout.jsx'
 import { useState, useEffect } from 'react'
 import { getPosts } from '../../services/posts.js'
 import './Posts.css'
-import Post from '../../components/Post/Post'
 
-// import PostsData from '../../components/Post/Post'
+import Post from '../../components/Post/Post'
 import Search from '../../components/Search/Search'
-// import Sort from '../../components/Sort/Sort'
-// // import { AZ, ZA } from '../../utils/sort'
+import Sort from '../../components/Sort/Sort'
+import { AZTitle, ZATitle, AZPub, ZAPub } from '../../utils/sort'
 
 
 // export post component to render it on screen
@@ -29,26 +28,32 @@ const Posts = () => {
     fetchPosts();
   }, [])
   
-  // const handleSort = (type) => {
-  //   if (type !== '' && type !== undefined) {
-  //     setSortType(type)
-  //   }
-  //   switch (type) {
-  //     case 'title-ascending':
-  //       setSearchResult(AZ(searchResult))
-  //       break
-  //     case 'title-descending':
-  //       setSearchResult(ZA(searchResult))
-  //       break
-  //     default:
-  //       break
-  //   }
-  // }
+  const handleSort = (type) => {
+    if (type !== '' && type !== undefined) {
+      setSortType(type)
+    }
+    switch (type) {
+      case 'title-ascending':
+        setSearchResult(AZTitle(searchResult))
+        break
+      case 'title-descending':
+        setSearchResult(ZATitle(searchResult))
+        break
+        case 'publisher-ascending':
+        setSearchResult(AZPub(searchResult))
+        break
+      case 'publisher-descending':
+        setSearchResult(ZAPub(searchResult))
+        break
+      default:
+        break
+    }
+  }
 
-  // if (applySort) {
-  //   handleSort(sortType)
-  //   setApplySort(false)
-  // }
+  if (applySort) {
+    handleSort(sortType)
+    setApplySort(false)
+  }
 
   const handleSearch = (event) => {
     const results = posts.filter((post) =>
@@ -66,7 +71,7 @@ const Posts = () => {
 			  <h1>Test Posts.js</h1>
       </div>
       
-      {/* <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
+       <Sort onSubmit={handleSubmit} handleSort={handleSort} /> 
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <div className='posts'>
         {searchResult.map((post, index) => {
