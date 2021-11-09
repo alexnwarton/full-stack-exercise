@@ -56,7 +56,7 @@ const PostEdit = (props) => {
           className="input-post-image"
           placeholder="Image Link"
           value={post.imgURL}
-          name="image"
+          name="imgURL"
           onChange={handleChange}
           />
           <textarea 

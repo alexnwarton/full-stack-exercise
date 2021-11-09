@@ -7,7 +7,7 @@ const Nav = () => {
       <div className='nav'>
         <NavLink className='logo' to='/'>Pasta Pizza People</NavLink>
         <div>
-          <NavLink className='link' to='/add-posts'>Make a Post</NavLink>
+          <NavLink className='link' to='/add-post'>Make a Post</NavLink>
         </div>
       </div>
     </nav>

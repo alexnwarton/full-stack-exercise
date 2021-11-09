@@ -24,15 +24,14 @@ const PostDetail = (props) => {
        <div className='container'>
           <h1 >{fetchedPost.title}</h1>
           <section>
+          <img src={fetchedPost.imgURL}/>
           <p >{fetchedPost.review}</p>
-
           <h5 >{fetchedPost.publisher}</h5>
           </section>
         </div>
         <div className="button-container">
         <button className="edit-button"><Link className="edit-link" to={`/posts/${fetchedPost._id}/edit`}>Edit</Link></button>
-        {/*CHANGE THIS TO THE DELETE FUNCTION AFTER WE GET THIS WORKING*/}
-        <button className="delete-button" onClick={() => console.log(fetchedPost._id)}>Delete</button>
+        <button className="delete-button" onClick={() => deletePost(fetchedPost._id)}>Delete</button>
         </div>
       </div>
     </Layout>
